@@ -21,14 +21,13 @@ public class DetallesHistoriaCService implements DetallesHistoriaCRepository{
 
 	@Override
 	public List<DetallesHistoriaC> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return detallesHistoriaCRepository.findAll();
 	}
 
 	@Override
 	public List<DetallesHistoriaC> findAll(Sort sort) {
 		// TODO Auto-generated method stub
-		return null;
+		return detallesHistoriaCRepository.findAll(sort);
 	}
 
 	@Override
@@ -93,14 +92,12 @@ public class DetallesHistoriaCService implements DetallesHistoriaCRepository{
 
 	@Override
 	public <S extends DetallesHistoriaC> S save(S entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return detallesHistoriaCRepository.save(entity);
 	}
 
 	@Override
 	public Optional<DetallesHistoriaC> findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return detallesHistoriaCRepository.findById(id);
 	}
 
 	@Override
@@ -117,8 +114,7 @@ public class DetallesHistoriaCService implements DetallesHistoriaCRepository{
 
 	@Override
 	public void deleteById(Long id) {
-		// TODO Auto-generated method stub
-		
+		detallesHistoriaCRepository.deleteById(id);
 	}
 
 	@Override

@@ -21,8 +21,7 @@ public class ColaboradorService implements ColaboradorRepository{
 
 	@Override
 	public List<Colaborador> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return colaboradorRepository.findAll();
 	}
 
 	@Override
@@ -93,14 +92,14 @@ public class ColaboradorService implements ColaboradorRepository{
 
 	@Override
 	public <S extends Colaborador> S save(S entity) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return colaboradorRepository.save(entity);
 	}
 
 	@Override
 	public Optional<Colaborador> findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return colaboradorRepository.findById(id);
 	}
 
 	@Override
@@ -117,7 +116,7 @@ public class ColaboradorService implements ColaboradorRepository{
 
 	@Override
 	public void deleteById(Long id) {
-		// TODO Auto-generated method stub
+		colaboradorRepository.deleteById(id);
 		
 	}
 

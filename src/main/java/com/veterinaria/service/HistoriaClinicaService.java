@@ -26,8 +26,8 @@ public class HistoriaClinicaService implements HistoriaClinicaRepository{
 
 	@Override
 	public List<HistoriaClinica> findAll(Sort sort) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return historiaClinicaRepository.findAll(sort);
 	}
 
 	@Override
@@ -92,14 +92,14 @@ public class HistoriaClinicaService implements HistoriaClinicaRepository{
 
 	@Override
 	public <S extends HistoriaClinica> S save(S entity) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return historiaClinicaRepository.save(entity);
 	}
 
 	@Override
 	public Optional<HistoriaClinica> findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return historiaClinicaRepository.findById(id);
 	}
 
 	@Override
@@ -116,13 +116,13 @@ public class HistoriaClinicaService implements HistoriaClinicaRepository{
 
 	@Override
 	public void deleteById(Long id) {
-		// TODO Auto-generated method stub
+		historiaClinicaRepository.deleteById(id);
 		
 	}
 
 	@Override
 	public void delete(HistoriaClinica entity) {
-		// TODO Auto-generated method stub
+		historiaClinicaRepository.delete(entity);
 		
 	}
 

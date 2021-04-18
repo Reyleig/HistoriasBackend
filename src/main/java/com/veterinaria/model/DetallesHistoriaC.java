@@ -1,7 +1,6 @@
 package com.veterinaria.model;
 
 import java.sql.Timestamp;
-import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,6 +10,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.CreationTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name = "detalle_historia_clinica")
@@ -23,10 +26,13 @@ public class DetallesHistoriaC {
 	private double peso;
 	private double frecuencia_cardiaca;
 	private double frecuencia_respiratoria;
-	private Timestamp fecha_hora;
+
 	private String alimentacion;
 	private String habitad;
 	private String observacion;
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "America/Bogota")
+	@CreationTimestamp
+	private Timestamp fecha_hora;
 	
 	@OneToOne
 	@JoinColumn(name="colaborador_id")
